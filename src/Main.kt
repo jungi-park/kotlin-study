@@ -62,17 +62,26 @@ fun main() {
         println("not contain")
     }
 
-    when(price){
+    when (price) {
         100 -> println("1. price = $price")
         200 -> println("2. price = $price")
         300 -> println("3. price = $price")
         else -> println("4. Not")
     }
 
-    when(price){
+//    in 100..199
+    when (price) {
         in 100..199 -> println("1. 100 ~ 199")
         in 200..299 -> println("2. 200 ~ 299")
         in 300..399 -> println("3. 300 ~ 399")
         else -> println("4. Not")
     }
+
+    val price1: Int = 100
+    val price2: Int = 200
+
+    val price3 = sumPrice(price1,price2)
+    println("price3 = $price3")
 }
+
+fun sumPrice(price1: Int, price2: Int): Int = price1 + price2
