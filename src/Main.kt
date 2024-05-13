@@ -24,7 +24,7 @@ fun main() {
     println(b)
 
     var k: String = "ABC"
-    var l: String? ="ABC"
+    var l: String? = "ABC"
 
 //    k = null
     l = null
@@ -44,4 +44,35 @@ fun main() {
     println("c = " + c::class)
     println("v = " + v::class)
     println("n = " + n::class)
+
+    val priceA: Int = 100
+    val priceB: Int = 200
+
+    if (priceA >= priceB) {
+        println("priceA = $priceA")
+    } else {
+        println("priceB = $priceB")
+    }
+
+    val price: Int = 100
+
+    if (price in arrayOf(100, 200, 300)) {
+        println("contain")
+    } else {
+        println("not contain")
+    }
+
+    when(price){
+        100 -> println("1. price = $price")
+        200 -> println("2. price = $price")
+        300 -> println("3. price = $price")
+        else -> println("4. Not")
+    }
+
+    when(price){
+        in 100..199 -> println("1. 100 ~ 199")
+        in 200..299 -> println("2. 200 ~ 299")
+        in 300..399 -> println("3. 300 ~ 399")
+        else -> println("4. Not")
+    }
 }
