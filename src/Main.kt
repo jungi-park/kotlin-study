@@ -80,45 +80,8 @@ fun main() {
     val price1: Int = 100
     val price2: Int = 200
 
-    val price3 = sumPrice(price1, price2)
+    val price3 = sumPrice(price1,price2)
     println("price3 = $price3")
-
-    val item = Item("book", 10_000)
-    println("Item name is ${item.name}, price is ${item.price}")
-
-    val itemTrade = ItemTradeImpl("bookTrade", 10_000)
-    println("Item name is ${itemTrade.name}, price is ${itemTrade.price}")
-    itemTrade.buy()
-    itemTrade.sell()
 }
 
 fun sumPrice(price1: Int, price2: Int): Int = price1 + price2
-
-class Item(
-    val name: String,
-    val price: Int
-)
-
-enum class Color {
-    RED,
-    GREEN,
-    BLUE
-}
-
-interface ItemTrade {
-    fun buy()
-    fun sell()
-}
-
-class ItemTradeImpl(
-    val name: String,
-    val price: Int
-) : ItemTrade {
-    override fun buy() {
-        println("[buy] $name")
-    }
-
-    override fun sell() {
-        println("[sell] $name")
-    }
-}
